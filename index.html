@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/source/image/rose.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="一个记录自己成长的技术网站，更新自己学习领悟，以及与安全技术相关的知识，希望大家能喜欢，如果错误欢迎提出更正，希望每一位安全儿都能在自己的领域发光发热。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="热爱安全的RSec">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="热爱安全的RSec">
+<meta property="og:description" content="一个记录自己成长的技术网站，更新自己学习领悟，以及与安全技术相关的知识，希望大家能喜欢，如果错误欢迎提出更正，希望每一位安全儿都能在自己的领域发光发热。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="RSec">
+<meta property="article:tag" content="CTF、网络安全、领域技术">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>热爱安全的RSec</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">热爱安全的RSec</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">微信公众号-NGIL实验室</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">0</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">1</span></a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">RSec</p>
+  <div class="site-description" itemprop="description">一个记录自己成长的技术网站，更新自己学习领悟，以及与安全技术相关的知识，希望大家能喜欢，如果错误欢迎提出更正，希望每一位安全儿都能在自己的领域发光发热。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/18/ctf-study/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="RSec">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热爱安全的RSec">
+      <meta itemprop="description" content="一个记录自己成长的技术网站，更新自己学习领悟，以及与安全技术相关的知识，希望大家能喜欢，如果错误欢迎提出更正，希望每一位安全儿都能在自己的领域发光发热。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 热爱安全的RSec">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/06/18/ctf-study/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-06-18 19:35:14 / 修改时间：19:39:01" itemprop="dateCreated datePublished" datetime="2024-06-18T19:35:14+08:00">2024-06-18</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="CTF-学习大纲"><a href="#CTF-学习大纲" class="headerlink" title="CTF 学习大纲"></a>CTF 学习大纲</h1><h2 id="一、比赛相关"><a href="#一、比赛相关" class="headerlink" title="一、比赛相关"></a>一、比赛相关</h2><h3 id="1-CTF-比赛经验分享"><a href="#1-CTF-比赛经验分享" class="headerlink" title="1. CTF 比赛经验分享"></a>1. CTF 比赛经验分享</h3><ul>
+<li>分享经验丰富的参赛者的成功和失败案例</li>
+<li>讨论常见的挑战和应对策略</li>
+<li>复盘和分析之前比赛的题目</li>
+</ul>
+<h3 id="2-CTF-团队协作"><a href="#2-CTF-团队协作" class="headerlink" title="2. CTF 团队协作"></a>2. CTF 团队协作</h3><ul>
+<li>组建高效团队的方法</li>
+<li>团队分工与合作技巧</li>
+<li>使用协作工具（如Slack、Trello）</li>
+</ul>
+<h3 id="3-CTF-解题策略"><a href="#3-CTF-解题策略" class="headerlink" title="3. CTF 解题策略"></a>3. CTF 解题策略</h3><ul>
+<li>解题流程和思路</li>
+<li>优先级管理和时间分配</li>
+<li>常见解题工具和技巧</li>
+</ul>
+<h3 id="4-CTF-题目类型"><a href="#4-CTF-题目类型" class="headerlink" title="4. CTF 题目类型"></a>4. CTF 题目类型</h3><ul>
+<li>Web</li>
+<li>Pwn</li>
+<li>Misc</li>
+<li>Crypto</li>
+<li>Reverse Engineering (Re)</li>
+</ul>
+<h3 id="5-CTF-比赛平台"><a href="#5-CTF-比赛平台" class="headerlink" title="5. CTF 比赛平台"></a>5. CTF 比赛平台</h3><ul>
+<li>CTFtime</li>
+<li>CTFd</li>
+<li>CTF365</li>
+</ul>
+<h2 id="二、Re（逆向）方向"><a href="#二、Re（逆向）方向" class="headerlink" title="二、Re（逆向）方向"></a>二、Re（逆向）方向</h2><h3 id="1-软件保护技术"><a href="#1-软件保护技术" class="headerlink" title="1. 软件保护技术"></a>1. 软件保护技术</h3><ul>
+<li>代码混淆</li>
+<li>加壳保护</li>
+</ul>
+<h3 id="2-反调试技术"><a href="#2-反调试技术" class="headerlink" title="2. 反调试技术"></a>2. 反调试技术</h3><ul>
+<li>常见反调试技术（如检测调试器）</li>
+<li>绕过反调试的方法</li>
+</ul>
+<h3 id="3-符号执行"><a href="#3-符号执行" class="headerlink" title="3. 符号执行"></a>3. 符号执行</h3><ul>
+<li>符号执行工具（如Angr）</li>
+<li>使用符号执行解决逆向题目</li>
+</ul>
+<h3 id="4-动态分析"><a href="#4-动态分析" class="headerlink" title="4. 动态分析"></a>4. 动态分析</h3><ul>
+<li>使用调试器（如GDB, OllyDbg, x64dbg）</li>
+<li>运行时分析和内存分析</li>
+</ul>
+<h3 id="5-静态分析"><a href="#5-静态分析" class="headerlink" title="5. 静态分析"></a>5. 静态分析</h3><ul>
+<li>代码审查和静态分析工具（如Ghidra, IDA Pro）</li>
+<li>反编译和反汇编技术</li>
+</ul>
+<h3 id="6-反编译"><a href="#6-反编译" class="headerlink" title="6. 反编译"></a>6. 反编译</h3><ul>
+<li>IDA Pro</li>
+<li>Ghidra</li>
+</ul>
+<h2 id="三、Pwn（二进制）方向"><a href="#三、Pwn（二进制）方向" class="headerlink" title="三、Pwn（二进制）方向"></a>三、Pwn（二进制）方向</h2><h3 id="1-竞争条件"><a href="#1-竞争条件" class="headerlink" title="1. 竞争条件"></a>1. 竞争条件</h3><ul>
+<li>竞争条件的识别与利用</li>
+<li>竞态漏洞利用技巧</li>
+</ul>
+<h3 id="2-格式化字符串攻击"><a href="#2-格式化字符串攻击" class="headerlink" title="2. 格式化字符串攻击"></a>2. 格式化字符串攻击</h3><ul>
+<li>格式化字符串漏洞原理</li>
+<li>利用技巧和防御方法</li>
+</ul>
+<h3 id="3-缓冲区溢出"><a href="#3-缓冲区溢出" class="headerlink" title="3. 缓冲区溢出"></a>3. 缓冲区溢出</h3><ul>
+<li>栈溢出和堆溢出</li>
+<li>利用方法和防御措施</li>
+</ul>
+<h3 id="4-内存安全"><a href="#4-内存安全" class="headerlink" title="4. 内存安全"></a>4. 内存安全</h3><ul>
+<li>内存分配和管理</li>
+<li>常见的内存安全漏洞及防御方法</li>
+</ul>
+<h3 id="5-程序调试"><a href="#5-程序调试" class="headerlink" title="5. 程序调试"></a>5. 程序调试</h3><ul>
+<li>使用GDB进行调试</li>
+<li>IDA调试插件的使用</li>
+</ul>
+<h3 id="6-汇编语言"><a href="#6-汇编语言" class="headerlink" title="6. 汇编语言"></a>6. 汇编语言</h3><ul>
+<li>汇编基础知识</li>
+<li>汇编代码分析和编写</li>
+</ul>
+<h2 id="四、Cryptography（密码学）方向"><a href="#四、Cryptography（密码学）方向" class="headerlink" title="四、Cryptography（密码学）方向"></a>四、Cryptography（密码学）方向</h2><h3 id="1-公钥基础设施（PKI）"><a href="#1-公钥基础设施（PKI）" class="headerlink" title="1. 公钥基础设施（PKI）"></a>1. 公钥基础设施（PKI）</h3><ul>
+<li>PKI基本概念</li>
+<li>数字证书和证书颁发机构（CA）</li>
+</ul>
+<h3 id="2-身份认证协议"><a href="#2-身份认证协议" class="headerlink" title="2. 身份认证协议"></a>2. 身份认证协议</h3><ul>
+<li>常见身份认证协议（如OAuth, SAML）</li>
+<li>身份认证的实现和安全性分析</li>
+</ul>
+<h3 id="3-随机数生成"><a href="#3-随机数生成" class="headerlink" title="3. 随机数生成"></a>3. 随机数生成</h3><ul>
+<li>随机数生成算法</li>
+<li>随机数生成器的安全性分析</li>
+</ul>
+<h3 id="4-数字签名"><a href="#4-数字签名" class="headerlink" title="4. 数字签名"></a>4. 数字签名</h3><ul>
+<li>数字签名算法（如RSA, DSA）</li>
+<li>数字签名的应用和安全性</li>
+</ul>
+<h3 id="5-哈希函数"><a href="#5-哈希函数" class="headerlink" title="5. 哈希函数"></a>5. 哈希函数</h3><ul>
+<li>常见哈希算法（如MD5, SHA-1, SHA-256）</li>
+<li>哈希碰撞和破解技术</li>
+</ul>
+<h3 id="6-基础加密算法"><a href="#6-基础加密算法" class="headerlink" title="6. 基础加密算法"></a>6. 基础加密算法</h3><ul>
+<li>对称加密（如AES, DES）</li>
+<li>非对称加密（如RSA, ECC）</li>
+</ul>
+<h2 id="五、Misc（杂项）方向"><a href="#五、Misc（杂项）方向" class="headerlink" title="五、Misc（杂项）方向"></a>五、Misc（杂项）方向</h2><h3 id="1-逆向工程"><a href="#1-逆向工程" class="headerlink" title="1. 逆向工程"></a>1. 逆向工程</h3><ul>
+<li>基本逆向工程技巧</li>
+<li>工具和方法（如binwalk, foremost）</li>
+</ul>
+<h3 id="2-密码破解"><a href="#2-密码破解" class="headerlink" title="2. 密码破解"></a>2. 密码破解</h3><ul>
+<li>字典攻击和暴力破解</li>
+<li>破解工具（如John the Ripper, Hashcat）</li>
+</ul>
+<h3 id="3-网络流量分析"><a href="#3-网络流量分析" class="headerlink" title="3. 网络流量分析"></a>3. 网络流量分析</h3><ul>
+<li>抓包和流量分析工具（如Wireshark, tcpdump）</li>
+<li>流量解密和重放攻击</li>
+</ul>
+<h3 id="4-数字取证"><a href="#4-数字取证" class="headerlink" title="4. 数字取证"></a>4. 数字取证</h3><ul>
+<li>取证分析工具（如Autopsy, Sleuth Kit）</li>
+<li>数据恢复和分析技术</li>
+</ul>
+<h3 id="5-隐写术"><a href="#5-隐写术" class="headerlink" title="5. 隐写术"></a>5. 隐写术</h3><ul>
+<li>隐写技术和工具</li>
+<li>隐写信息的提取和检测</li>
+</ul>
+<h3 id="6-编码和解码"><a href="#6-编码和解码" class="headerlink" title="6. 编码和解码"></a>6. 编码和解码</h3><ul>
+<li>常见编码方式（如Base64, URL编码）</li>
+<li>编码转换工具和方法</li>
+</ul>
+<h2 id="六、Web-方向"><a href="#六、Web-方向" class="headerlink" title="六、Web 方向"></a>六、Web 方向</h2><h3 id="1-OWASP-TOP-10-漏洞"><a href="#1-OWASP-TOP-10-漏洞" class="headerlink" title="1. OWASP TOP 10 漏洞"></a>1. OWASP TOP 10 漏洞</h3><ul>
+<li>常见Web漏洞及防御措施</li>
+<li>OWASP TOP 10介绍和案例分析</li>
+</ul>
+<h3 id="2-Web框架"><a href="#2-Web框架" class="headerlink" title="2. Web框架"></a>2. Web框架</h3><ul>
+<li>常用Web框架（如Django, Flask, Spring）</li>
+<li>框架的安全配置和使用</li>
+</ul>
+<h3 id="3-CSRF（跨站请求伪造）"><a href="#3-CSRF（跨站请求伪造）" class="headerlink" title="3. CSRF（跨站请求伪造）"></a>3. CSRF（跨站请求伪造）</h3><ul>
+<li>CSRF攻击原理</li>
+<li>防御方法和实践</li>
+</ul>
+<h3 id="4-XSS（跨站脚本攻击）"><a href="#4-XSS（跨站脚本攻击）" class="headerlink" title="4. XSS（跨站脚本攻击）"></a>4. XSS（跨站脚本攻击）</h3><ul>
+<li>XSS类型（反射型、存储型、DOM型）</li>
+<li>防御措施和实践</li>
+</ul>
+<h3 id="5-SQL注入"><a href="#5-SQL注入" class="headerlink" title="5. SQL注入"></a>5. SQL注入</h3><ul>
+<li>SQL注入攻击原理</li>
+<li>防御方法和最佳实践</li>
+</ul>
+<h3 id="6-Web服务器"><a href="#6-Web服务器" class="headerlink" title="6. Web服务器"></a>6. Web服务器</h3><ul>
+<li>常用Web服务器（如Apache, Nginx）</li>
+<li>安全配置和管理</li>
+</ul>
+<h3 id="7-HTML-CSS-JavaScript"><a href="#7-HTML-CSS-JavaScript" class="headerlink" title="7. HTML&#x2F;CSS&#x2F;JavaScript"></a>7. HTML&#x2F;CSS&#x2F;JavaScript</h3><ul>
+<li>前端基础知识</li>
+<li>常见安全问题和防御措施</li>
+</ul>
+<h2 id="七、基础知识"><a href="#七、基础知识" class="headerlink" title="七、基础知识"></a>七、基础知识</h2><h3 id="1-编程基础"><a href="#1-编程基础" class="headerlink" title="1. 编程基础"></a>1. 编程基础</h3><ul>
+<li>Python</li>
+<li>C&#x2F;C++</li>
+<li>Java</li>
+</ul>
+<h3 id="2-数据结构和算法"><a href="#2-数据结构和算法" class="headerlink" title="2. 数据结构和算法"></a>2. 数据结构和算法</h3><ul>
+<li>常用数据结构（如数组、链表、树）</li>
+<li>基本算法（如排序、搜索）</li>
+</ul>
+<h3 id="3-Linux系统"><a href="#3-Linux系统" class="headerlink" title="3. Linux系统"></a>3. Linux系统</h3><ul>
+<li>Linux基础命令</li>
+<li>系统管理和安全配置</li>
+</ul>
+<h3 id="4-计算机网络"><a href="#4-计算机网络" class="headerlink" title="4. 计算机网络"></a>4. 计算机网络</h3><ul>
+<li>TCP&#x2F;IP协议</li>
+<li>网络安全和常见攻击</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">RSec</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
